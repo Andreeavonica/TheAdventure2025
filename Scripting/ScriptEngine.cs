@@ -42,6 +42,10 @@ public class ScriptEngine
         };
         _scriptReferences = references.Select(x => MetadataReference.CreateFromFile(x)).ToArray();
     }
+    public void Reset()
+    {
+        _scripts.Clear();
+    }
 
     public void LoadAll(string scriptFolder)
     {
